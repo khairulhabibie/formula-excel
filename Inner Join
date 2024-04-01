@@ -1,0 +1,16 @@
+Inner Join pada excel:
+rumus :
+
+untuk 1 kriteria sama:
+=IFERROR(INDEX($B$1:$B$10, MATCH(D1, $A$1:$A$10, 0)), "")
+
+Rumus di atas akan mencocokkan nilai dalam kolom D (dari tabel kedua) dengan nilai dalam kolom A (dari tabel pertama) dan
+mengembalikan nilai yang sesuai dari kolom B (dari tabel pertama). Jika tidak ada kecocokan yang ditemukan, maka akan
+dikembalikan nilai kosong ("") menggunakan IFERROR.
+
+
+=IFERROR(INDEX($B$1:$B$10; MATCH(1; ($A$1:$A$10=A1) * ($C$1:$C$10=C1); 0)); "")
+Dalam rumus ini, ($A$1:$A$10=A1) dan ($C$1:$C$10=C1) adalah dua kriteria yang akan dicocokkan.
+Rumus akan mencocokkan nilai di kolom A (tabel pertama) dengan nilai di kolom A dan nilai di kolom C (tabel kedua)
+dengan nilai di kolom C, dan mengembalikan nilai yang sesuai dari kolom B (tabel pertama). Jika tidak ada kecocokan
+yang ditemukan, maka akan dikembalikan nilai kosong ("") menggunakan IFERROR.
