@@ -1,0 +1,8 @@
+Ubah kedalam format Nomor Bank
+=CONCATENATE(LEFT(A6;4); "."; MID(A6;5;4); "."; MID(A6;9;5); "-"; RIGHT(A6;1))
+
+sebelum :
+12345678912345
+
+setelah menggunakan formula:
+1234.5678.91234-5
